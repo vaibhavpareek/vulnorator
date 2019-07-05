@@ -1,0 +1,29 @@
+                                                 Vulnorator - Linux Based Python Tool
+                                                       http://vulnorator.ml                                                
+                                                      Devloped By VAIBHAV PAREEK
+                                                            VERSION 1.0
+
+Why i have develop this tool ?
+
+When the first time I realized I want to be in the cybersecurity, I have searched for months on the internet for good stuff to learn about cyber
+security and penetration testing .i have searched the internet for months without getting much as I was the beginner to even google searching,
+all i knew was how to search for assignment of school. this way i have restricted myself to that searching only. when I started facing problems,
+I started searching for solutions this way i come to know about linux and linux was like error box for me for intial 1 year. With the time i get
+familier with the linux and in love with kali linux. Very soon i get to know about Metasploit after get to know a little bit about linux commands,
+which holds my interest for few days as again i din't get much resources to learn about metasploit on google .then i have come to know about that 
+there are various free courses available on the internet to learn about all this.Few days back when i was hunting for a website, I got a message 
+from someone on linkedin who wants to start learning cyber security.i have given him only one suggestion that anyone who wants to learn ethical 
+hacking and cyber security needs to learn by itself means just search and learn. It is a journey that you have to go through to be something in 
+this field.No offence to anyone who doesn't agree to my opinion.But then a thought strikes my mind that atleast i can make something which softens
+their journey little bit. this way i started working on this project and finally completed.
+
+whoami ?
+
+Vaibhav is an engineering student pursuing his BTech(Hons) in computer science. He has been practicing in the field of cybersecurity for the last
+2 years. He has found many vulnerabilities on various websites and reported it to them with 4 vulnerabilities in government websites under the RVDP
+Scheme. He has web development experience as well both in frontend and backend(Django). He is not an expert in this field but he is only sharing his
+experience with this vulnorator tool. The only aim of his is to help people more familiar with vulnerabilities and cybersecurity and to get started 
+in this awesome field. 
+
+Linkedin Profile of Vaibhav: https://www.linkedin.com/in/vaibhavvp/
+Email ID to contact him : vaibhavpareekvp7@gmail.com

@@ -1,0 +1,22 @@
+    [1]  Server Security Misconfiguration
+    [2]  Server-Side Injection
+    [3]  Broken Authentication and Session Management
+    [4]  Sensitive Data Exposure
+    [5]  Cross-Site Scripting (XSS)
+    [6]  Broken Access Control (BAC)
+    [7]  Cross-Site Request Forgery (CSRF)
+    [8]  Application-Level Denial-of-Service (DoS)
+    [9]  Unvalidated Redirects and Forwards
+    [10] External Behavior
+    [11] Insufficient Security Configurability
+    [12] Using Components with Known Vulnerabilities
+    [13] Insecure Data Storage
+    [14] Lack of Binary Hardening
+    [15] Insecure Data Transport
+    [16] Insecure OS/Firmware
+    [17] Broken Cryptography
+    [18] Privacy Concerns
+    [19] Network Security Misconfiguration
+    [20] Mobile Security Misconfiguration
+    [21] Client-Side Injection
+    [22] Automotive Security Misconfiguration

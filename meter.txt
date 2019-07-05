@@ -1,0 +1,26 @@
+    [P1] CRITICAL | [P2] HIGH | [P3] MEDIUM | [P4] LOW | [P5] INFORMATIONAL
+    
+    [1]  Server Security Misconfiguration                        | P1 : 1 | P2 : 2 | P3 : 2 | P4 : 15 | P5 : 38 |   
+    [2]  Server-Side Injection                                   | P1 : 4 | P2 : 0 | P3 : 2 | P4 : 2  | P5 : 6  |  
+    [3]  Broken Authentication and Session Management            | P1 : 1 | P2 : 0 | P3 : 3 | P4 : 7  | P5 : 7  |    
+    [4]  Sensitive Data Exposure                                 | P1 : 2 | P2 : 1 | P3 : 1 | P4 : 6  | P5 : 12 |    
+    [5]  Cross-Site Scripting (XSS)                              | P1 : 0 | P2 : 1 | P3 : 3 | P4 : 6  | P5 : 6  |    
+    [6]  Broken Access Control (BAC)                             | P1 : 0 | P2 : 1 | P3 : 1 | P4 : 2  | P5 : 1  |    
+    [7]  Cross-Site Request Forgery (CSRF)                       | P1 : 0 | P2 : 1 | P3 : 0 | P4 : 0  | P5 : 2  |    
+    [8]  Application-Level Denial-of-Service (DoS)               | P1 : 0 | P2 : 1 | P3 : 1 | P4 : 0  | P5 : 2  |    
+    [9]  Unvalidated Redirects and Forwards                      | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 1  | P5 : 5  |
+    [10] External Behavior                                       | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 0  | P5 : 9  |    
+    [11] Insufficient Security Configurability                   | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 4  | P5 : 7  |    
+    [12] Using Components with Known Vulnerabilities             | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 1  | P5 : 2  |    
+    [13] Insecure Data Storage                                   | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 2  | P5 : 3  |    
+    [14] Lack of Binary Hardening                                | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 0  | P5 : 4  |    
+    [15] Insecure Data Transport                                 | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 1  | P5 : 1  |    
+    [16] Insecure OS/Firmware                                    | P1 : 2 | P2 : 1 | P3 : 0 | P4 : 0  | P5 : 0  |    
+    [17] Broken Cryptography                                     | P1 : 1 | P2 : 0 | P3 : 0 | P4 : 0  | P5 : 0  |    
+    [18] Privacy Concerns                                        | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 1  | P5 : 0  |    
+    [19] Network Security Misconfiguration                       | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 0  | P5 : 1  |
+    [20] Mobile Security Misconfiguration                        | P1 : 0 | P2 : 0 | P3 : 0 | P4 : 1  | P5 : 4  |    
+    [21] Client-Side Injection                                   | P1 : 0 | P2 : 0 | P3 : 1 | P4 : 0  | P5 : 2  |    
+    [22] Automotive Security Misconfiguration                    | P1 : 2 | P2 : 2 | P3 : 3 | P4 : 6  | P5 : 3  |
+         
+REFRENCE :: https://bugcrowd.com/vulnerability-rating-taxonomy

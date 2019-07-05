@@ -1,0 +1,46 @@
+Methodologies of Hacking or Exploiting is different for a different person.
+Here I am sharing the way I have used to learn and practice cybersecurity and still doing.
+I can share here some resources which can help you understand and practice exploitation and practice.
+
+Steps I have Followed :
+
+1. Get started with basic terminologies about cybersecurity like search about what is a vulnerability, exploit, risks, threats, compliances, penetration testing , modules, vulnerability management, penetration testing, hacking and basic terminologies.
+2. Now  Learn about basic commands of Linux to be familiar with the environment.
+      Resource1: https://www.geeksforgeeks.org/linux-commands/
+      Resource2: Linux Fundamentals by discourses on youtube.
+3. Now learn the basics of networking to be familiar with names like IP addresses, mac addresses, Routers, ports, services, OSI Model. 
+      Resource1: https://www.geeksforgeeks.org/computer-network-tutorials/
+      Resource 2: https://www.youtube.com/watch?v=n2D1o-aM-2s&list=PLh94XVT4dq02frQRRZBHzvj2hwuhzSByN
+4. Now Learn about basic vulnerabilities like
+     1. SQL Injection
+     2. Cross-Site Scripting
+     3. Cross-Site Request Forgery
+     4. Indirect Object Reference
+     5. Parameter Tempering
+     6. File Inclusion
+     7. File Upload
+     8. Authentication Bypass
+     9. Session Management
+    10. Account Takeover.
+     * Just paste the name in the google search box, and you will get thousands of resources for these vulnerabilities.
+5. Now download and setup XAMPP in your personal computer and also download these machines to practice web application penetration testing.
+     1. DVWA
+     2. OWASP Webgoat
+     3. OWASP Bwapp
+    4. Metaspoitable Multidae
+6. Now Practice online, play some CTF's to start thinking like a hacker or to understand their methodology.
+     Resource 1: rootme.org
+     Resource 2: hackthebox.eu
+     Resource 3: Hackerone101
+7. Now download some retired machines of hack the box in your virtual machine VirtualBox or Vmware.
+     1. Machines from hackthebox who are retired, people make a walkthrough for these machines on youtube so just search for it.
+8. Keep on learning and practicing these stuff to keep motivated yourself.
+9. Download some books and also follow some exceptional security researchers on forums or Linkedin.
+10 Books Resources : 
+        1. Web Application Hacker's Handbook 
+        2. Kali Linux- an ethical hacker's Cookbook
+Practice, read, and repeat to make yourself comfortable in this field.
+I hope it helps you learn about cybersecurity somewhat.......
+
+
+Vaibhav Pareek(Developer - Vulnorator)

@@ -1,0 +1,81 @@
+[+] SERVER SECURITY MISCONFIGURATION:
+			[-] Unsafe Cross-Origin Resource Sharing
+			[-] Path Traversal
+            [+] Directory Listing Enabled
+				[-]Sensitive Data Exposure
+    			[-]Non-Sensitive Data Exposure
+			[-]Same-Site Scripting
+			[-]SSL Attack (BREACH, POODLE etc.)
+			[+]Using Default Credentials
+			[+]Misconfigured DNS
+				[-]Basic Subdomain Takeover
+    			[-]High Impact Subdomain Takeover
+    			[-]Zone Transfer
+    			[-]Missing Certification Authority Authorization (CAA) Record
+			[+]Mail Server Misconfiguration
+				[-]No Spoofing Protection on Email Domain
+    			[-]Email Spoofing to Inbox due to Missing or Misconfigured DMARC on Email Domain
+    			[-]Email Spoofing to Spam Folder
+    			[-]Missing or Misconfigured SPF and/or DKIM
+    			[-]Email Spoofing on non-email domain
+			[+]Database Management System (DBMS) Misconfiguration
+				[-]Excessively Privileged User / DBA
+			[+]Lack of Password Confirmation
+				[-]Change Email Address
+    			[-]Change Password
+    			[-]Delete Account
+    			[-]Manage 2FA
+			[+]No Rate Limiting on Form
+    			[-]Registration
+    			[-]Login
+    			[-]Email-Triggering
+    			[-]SMS-Triggering
+			[+]Unsafe File Upload
+				[-]No Antivirus
+    			[-]No Size Limit
+    			[-]File Extension Filter Bypass
+			[-]Cookie Scoped to Parent Domain
+			[+]Missing Secure or HTTPOnly Cookie Flag
+				[-]Session Token
+    			[-]Non-Session Cookie
+			[+]Clickjacking
+				[-]Sensitive Click-Based Action
+    			[-]Form Input
+    			[-]Non-Sensitive Action
+			[+]OAuth Misconfiguration
+				[-]Account Takeover
+    			[-]Missing/Broken State Parameter
+    			[-]Insecure Redirect URI
+			[+]CAPTCHA
+				[-]Implementation Vulnerability
+    			[-]Brute Force
+    			[-]Missing
+			[+]Exposed Admin Portal
+		    	[-]To Internet
+			[-]Missing DNSSEC
+			[-]Fingerprinting/Banner Disclosure
+			[+]Username/Email Enumeration
+				[-]Brute Force
+			[+]Potentially Unsafe HTTP Method Enabled
+				[-]OPTIONS
+				[-]TRACE
+			[+]Insecure SSL
+				[-]Lack of Forward Secrecy
+    			[-]Insecure Cipher Suite
+    			[-]Certificate Error
+			[+]Reflected File Download (RFD)
+			[+]Lack of Security Headers
+				[-]X-Frame-Options
+    			[-]Cache-Control for a Non-Sensitive Page
+    			[-]X-XSS-Protection
+    			[-]Strict-Transport-Security
+    			[-]X-Content-Type-Options
+    			[-]Content-Security-Policy
+    			[-]Public-Key-Pins
+    			[-]X-Content-Security-Policy
+    			[-]X-Webkit-CSP
+    			[-]Content-Security-Policy-Report-Only
+    			[-]Cache-Control for a Sensitive Page
+			[+]Web Application Firewall (WAF) Bypass
+				[-]Direct Server Access
+			[+]Bitsquatting
