@@ -1,4 +1,4 @@
-# vulnorator
+# vulnorator - Linux Based Tool
 It is a linux based tool,which it has been developed for learning penetration testing and about the vulnerabilities.it is written in python.it also helps you to perform initial phases of hacking like information gathering , scanning and enumeration automatically by its awesome user driven module.It also helps you to learn about the vulnerabilites divided very specifically in each category. 
 
 Hardware Requirements to Run this tool fluently in your system.
@@ -18,7 +18,7 @@ Software Requirements to Run this tool fluently in your system.
 
 How to run this tool : 
 1. Just Clone this repositry : git clone https://github.com/vaibhavpareek/vulnorator.git
-2. Now copy this folder to your /root/Documents/ folder to not hamper the default file locations. if you want to copy it in some other location then just replace that path from "/root/Documents/" in Vulnorator.py
+2. Now copy this folder to your /root/Documents/ folder so the default file locations do not get hampered. if you want to copy it to some another location then just replace that path with "/root/Documents/" in Vulnorator.py
 3. Now everything is fine and good to go.
 4. Just run the Vulnorator file by 
    python3 Vulnorator.py  
