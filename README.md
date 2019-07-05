@@ -1,4 +1,5 @@
 # vulnorator - Linux Based Tool
+Website to know the each detail of this tool : http://vulnorator.ml/
 It is a linux based tool,which it has been developed for learning penetration testing and about the vulnerabilities.it is written in python.it also helps you to perform initial phases of hacking like information gathering , scanning and enumeration automatically by its awesome user driven module.It also helps you to learn about the vulnerabilites divided very specifically in each category. 
 
 Hardware Requirements to Run this tool fluently in your system.
