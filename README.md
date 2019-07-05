@@ -23,3 +23,4 @@ How to run this tool :
 4. Just run the Vulnorator file by 
    python3 Vulnorator.py  
 And enjoy the experience with fresh new tool build in python for people interested in cyber security.
+![image](https://user-images.githubusercontent.com/37809497/60724977-83930e00-9f55-11e9-87d5-a6b65cd2d5b2.png)
