@@ -1,9 +1,8 @@
 import terminal_banner
 import pyfiglet
 from os import system
-import requests,sys,webbrowser,bs4
+import webbrowser
 from googlesearch import search
-from bs4 import BeautifulSoup
 import time
 def show():
 	print("\t\t\t\tSharp your tools before hunting !! \n");
