@@ -1,5 +1,5 @@
 # vulnorator - Linux Based Tool
-Website to know the each detail of this tool : http://vulnorator.ml/
+Website to know the each detail of this tool : https://vulnorator.ml/
 
 It is a linux based tool,which it has been developed for learning penetration testing and about the vulnerabilities.it is written in python.it also helps you to perform initial phases of hacking like information gathering , scanning and enumeration automatically by its awesome user driven module.It also helps you to learn about the vulnerabilites divided very specifically in each category. 
 
@@ -14,7 +14,7 @@ Software Requirements to Run this tool fluently in your system.
     1. Terminal banner - pip3 install terminal-banner
     2. Pyfiglet    - pip3 install pyfiglet
     3. os(if not by default) - pip3 install os
-    4. googlesearch(if not by default) - pip3 install googlesearch
+    4. googlesearch(if not by default) - pip3 install google
     5. time(if not by default) - pip3 install time.
 3. Now you have all the dependencies installed in your system to run this tool smoothely.
 
