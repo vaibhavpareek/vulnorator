@@ -44,12 +44,12 @@ while(True):
 	if(ch==1):
 		system("clear")
 		print(ascii_banner)
-		print("\033[1;35;48m\nIMPORTANT :: \n[+] Just Provide the URL or IP address of the target.it will open related tabs in your browser for information gathering.\n[+] Start reading content from websites opened in the browser to get best information regarding target.\n[+]It will store the whois and traceroute information in the files whois.txt and traceroute.txt respectively.\n[+] For backup all the important links are stored in a file which is saved in /root/Documents/vulnorator/OUTPUT/[WEBSITE]/footprinting.txt.")
+		print("\033[1;35;48m\nIMPORTANT :: \n[+] Just Provide the URL or IP address of the target.it will open related tabs in your browser for information gathering.\n[+] Start reading content from websites opened in the browser to get best information regarding target.\n[+]It will store the whois and traceroute information in the files whois.txt and traceroute.txt respectively.\n[+] For backup all the important links are stored in a file which is saved in OUTPUT/[WEBSITE]/footprinting.txt.")
 		que = input("\n\t\t\t\tURL or KEYWORD : ")
 		query = "inurl:"+que
-		system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(que))
-		system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(que)+"/Info_gathering")
-		file = open('/root/Documents/vulnorator/OUTPUT/'+str(que)+'/Info_gathering/footprinting.txt','a')
+		system("mkdir OUTPUT/"+str(que))
+		system("mkdir OUTPUT/"+str(que)+"/Info_gathering")
+		file = open('OUTPUT/'+str(que)+'/Info_gathering/footprinting.txt','a')
 		print("\033[1;35;48m\n[PASSIVE INFORMATION GATHERING]..........\n")
 		for j in search(query, tld="co.in", num=10, stop=10, pause=2):
 			print("[+ Opening]  "+str(j)+"\n")
@@ -71,19 +71,19 @@ while(True):
 		file.write("https://tools.dnsstuff.com/#dnsReport|type=domain&&value="+str(que))
 		webbrowser.open("https://tools.dnsstuff.com/#dnsReport|type=domain&&value="+str(que))
 		print("[+ Opening] DNS QUERIES : "+str("https://tools.dnsstuff.com/#dnsReport|type=domain&&value="+str(que))+"\n")
-		system("whois -v "+str(que)+" >/root/Documents/vulnorator/OUTPUT/"+str(que)+'/Info_gathering/whois.txt')
-		system("traceroute -v "+str(que)+" >/root/Documents/vulnorator/OUTPUT/"+str(que)+'/Info_gathering/traceroute.txt')
-		print("[+ Opening] WHOIS RECORDS ARE SAVED  : /root/Documents/vulnorator/OUTPUT/"+str(que)+"/Info_gathering/whois.txt")
-		print("[+ Opening] TRACEROUTE IS SAVED  : /root/Documents/vulnorator/OUTPUT/"+str(que)+"/Info_gathering/traceroute.txt")
+		system("whois -v "+str(que)+" >OUTPUT/"+str(que)+'/Info_gathering/whois.txt')
+		system("traceroute -v "+str(que)+" >OUTPUT/"+str(que)+'/Info_gathering/traceroute.txt')
+		print("[+ Opening] WHOIS RECORDS ARE SAVED  : OUTPUT/"+str(que)+"/Info_gathering/whois.txt")
+		print("[+ Opening] TRACEROUTE IS SAVED  : OUTPUT/"+str(que)+"/Info_gathering/traceroute.txt")
 		file.close();
 		down = input(">>Do you want the google search handbook for advance searches [y|n]?")
 		if(down=='y' or down=='Y' or down=='yes' or down=='Yes' or down=='YES'):
 			system("wget pdf.textfiles.com/security/googlehackers.pdf")
-			system("mv googlehackers.pdf /root/Documents/vulnorator/OUTPUT/"+str(que)+"/Info_gathering/")
+			system("mv googlehackers.pdf OUTPUT/"+str(que)+"/Info_gathering/")
 		dow = input(">>Do you want the OWASP guide for penetration testing [y|n]?")
 		if(dow=='y' or dow=='Y' or dow=='yes' or dow=='Yes' or dow=='YES'):
 			system("wget https://www.owasp.org/images/1/19/OTGv4.pdf")
-			system("mv OTGv4.pdf /root/Documents/vulnorator/OUTPUT/"+str(que)+"/Info_gathering/")
+			system("mv OTGv4.pdf OUTPUT/"+str(que)+"/Info_gathering/")
 		done = pyfiglet.figlet_format("Footprinting Done!")
 		print(done)
 		time.sleep(5)
@@ -93,13 +93,13 @@ while(True):
 		print(ascii_banner)
 		print("\n\033[1;35;48mIMPORTANT :: \n[+] Just provide the URL or IP address of the target.\n[+] It will scan the domain thoroghly for open ports ,running services ,firewalls , outdated versions and much more.\n[+] After scanning is completed output will be saved in the DESKTOP/OUTPUT/[WEBSITE]/scan.txt")
 		name = input("\n\n\t\t\tIP OR Name of the Target you want to scan : ")
-		system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(name))
-		system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Scanning")
-		system("nmap -v -p 1-1000 -sV -O -sS -T4 -oN /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Scanning/scan.txt"+" "+str(name))
+		system("mkdir OUTPUT/"+str(name))
+		system("mkdir OUTPUT/"+str(name)+"/Scanning")
+		system("nmap -v -p 1-1000 -sV -O -sS -T4 -oN OUTPUT/"+str(name)+"/Scanning/scan.txt"+" "+str(name))
 		down = input(">>Do you want to downnload Nmap Cheatsheet [y/n] ?")
 		if(down=='y' or down=='Y' or down=='yes' or down=='Yes' or down=='YES'):
 			system("wget https://blogs.sans.org/pen-testing/files/2013/10/NmapCheatSheetv1.1.pdf")
-			system("mv NmapCheatSheetv1.1.pdf /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Scanning/")
+			system("mv NmapCheatSheetv1.1.pdf OUTPUT/"+str(name)+"/Scanning/")
 		scan = pyfiglet.figlet_format("Scanning Done!")
 		print(scan)
 		time.sleep(5)
@@ -111,15 +111,15 @@ while(True):
 			system("clear")
 			enumeration()
 			name = input(">>[+ Target] : ")
-			system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(name))
-			system("mkdir /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Enumeration")
+			system("mkdir OUTPUT/"+str(name))
+			system("mkdir OUTPUT/"+str(name)+"/Enumeration")
 			inpp = int(input(">>Hacking : "))
 			if(inpp==1):
 				st = input(">>Enter the cve or service name to find exploit for that : ")
 				s = input(">>Do you want the save results ?(y/n) : ")
 				if(s=='y' or s=='YES' or s=='Yes' or s=='yes'):
-					system("echo 'Search results for the "+str(st)+" ' > /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Enumeration/exploits.txt")
-					system("searchsploit "+str(st) +" >> /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Enumeration/exploits.txt")
+					system("echo 'Search results for the "+str(st)+" ' > OUTPUT/"+str(name)+"/Enumeration/exploits.txt")
+					system("searchsploit "+str(st) +" >> OUTPUT/"+str(name)+"/Enumeration/exploits.txt")
 				system("searchsploit "+str(st))
 				q = input(">>To Go Back Press q or Q ? : ")
 			elif(inpp==2):
@@ -138,7 +138,7 @@ while(True):
 				i = input(">>Do you want to record your further work with metasploit as POC ?[y/n] : ")
 				if(i=='y' or i=='YES' or i=='Yes' or i=='yes'):
 					print("......Enter `exit` to stop recording work")
-					system("script --timing /root/Documents/vulnorator/OUTPUT/"+str(name)+"/Enumeration/metasploit.log")					
+					system("script --timing OUTPUT/"+str(name)+"/Enumeration/metasploit.log")					
 				system("msfconsole -q")
 				q = input(">>To Go Back Press q or Q ? : ")
 			elif(inpp==3):
@@ -167,7 +167,7 @@ while(True):
 				system("clear")
 				print(ascii_banner)
 				print("How To Get Started in CyberSecurity? ")
-				fo = open("/root/Documents/vulnorator/learn_cyber.txt",'r')
+				fo = open("learn_cyber.txt",'r')
 				ar = fo.readlines()
 				for i in ar:
 					print(i)
@@ -181,7 +181,7 @@ while(True):
 		fun = pyfiglet.figlet_format("THREAT METER",font="slant")
 		print(fun)
 		print("\n\033[1;32;48mIMPORTANT :: \n[+] There is a explanation of all vulnerabilities that can exist except for zero-days.\n[+] This is displaying the no of vulnerability with their threat level.\n[+] Each vulnerability is mentioned with its subparts threat level.\n")
-		fil = open("/root/Documents/vulnorator/meter.txt")
+		fil = open("meter.txt")
 		ar = fil.readlines()
 		for i in ar:
 			print(i)
@@ -193,12 +193,12 @@ while(True):
 			system("clear")
 			print(ascii_banner)
 			print("\n\033[1;35;48mIMPORTANT :: \n[+] These are explanations for all vulnerabilities that can exist except for zero-days.\n[+] Choose any choice among this list to see details of that vulnerability.\n[+] Details consist of vulnerability subparts,its exposure,its exploitation,ways of discovering,blogs related to this vulnerability.")
-			fil = open("/root/Documents/vulnorator/vulnrator.txt")
+			fil = open("vulnrator.txt")
 			ar = fil.readlines()
 			for i in ar:
 				print(i)
 			fil.close()
-			switch = {1:"/root/Documents/vulnorator/OUTPUT/vulnerability/servermis.txt",2:"/root/Documents/vulnorator/OUTPUT/vulnerability/srvsideinj.txt",3:"/root/Documents/vulnorator/OUTPUT/vulnerability/brokensession.txt",4:"/root/Documents/vulnorator/OUTPUT/vulnerability/sensitivedataexp.txt",5:"/root/Documents/vulnorator/OUTPUT/vulnerability/xss.txt",6:"/root/Documents/vulnorator/OUTPUT/vulnerability/bac.txt",7:"/root/Documents/vulnorator/OUTPUT/vulnerability/csrf.txt",8:"/root/Documents/vulnorator/OUTPUT/vulnerability/ddos.txt",9:"/root/Documents/vulnorator/OUTPUT/vulnerability/redirect.txt",10:"/root/Documents/vulnorator/OUTPUT/vulnerability/extbehv.txt",11:"/root/Documents/vulnorator/OUTPUT/vulnerability/insuff_conf_secr.txt",12:"/root/Documents/vulnorator/OUTPUT/vulnerability/vulnerable_comp.txt",13:"/root/Documents/vulnorator/OUTPUT/vulnerability/Insecure_DATA.txt",14:"/root/Documents/vulnorator/OUTPUT/vulnerability/lackofbinary.txt",15:"/root/Documents/vulnorator/OUTPUT/vulnerability/insdatatransport.txt",16:"/root/Documents/vulnorator/OUTPUT/vulnerability/insecureos.txt",17:"/root/Documents/vulnorator/OUTPUT/vulnerability/brokencrypto.txt",18:"/root/Documents/vulnorator/OUTPUT/vulnerability/privacyconcern.txt",19:"/root/Documents/vulnorator/OUTPUT/vulnerability/nwsec_conf.txt",20:"/root/Documents/vulnorator/OUTPUT/vulnerability/mobile_sec.txt",21:"/root/Documents/vulnorator/OUTPUT/vulnerability/client_inj.txt",22:"/root/Documents/vulnorator/OUTPUT/vulnerability/auto_scu_conf.txt"}
+			switch = {1:"OUTPUT/vulnerability/servermis.txt",2:"OUTPUT/vulnerability/srvsideinj.txt",3:"OUTPUT/vulnerability/brokensession.txt",4:"OUTPUT/vulnerability/sensitivedataexp.txt",5:"OUTPUT/vulnerability/xss.txt",6:"OUTPUT/vulnerability/bac.txt",7:"OUTPUT/vulnerability/csrf.txt",8:"OUTPUT/vulnerability/ddos.txt",9:"OUTPUT/vulnerability/redirect.txt",10:"OUTPUT/vulnerability/extbehv.txt",11:"OUTPUT/vulnerability/insuff_conf_secr.txt",12:"OUTPUT/vulnerability/vulnerable_comp.txt",13:"OUTPUT/vulnerability/Insecure_DATA.txt",14:"OUTPUT/vulnerability/lackofbinary.txt",15:"OUTPUT/vulnerability/insdatatransport.txt",16:"OUTPUT/vulnerability/insecureos.txt",17:"OUTPUT/vulnerability/brokencrypto.txt",18:"OUTPUT/vulnerability/privacyconcern.txt",19:"OUTPUT/vulnerability/nwsec_conf.txt",20:"OUTPUT/vulnerability/mobile_sec.txt",21:"OUTPUT/vulnerability/client_inj.txt",22:"OUTPUT/vulnerability/auto_scu_conf.txt"}
 			chg = int(input("\t\t\t>>HACKING : "))
 			system("clear")
 			print(ascii_banner)
@@ -214,7 +214,7 @@ while(True):
 		print("\033[1;31;48m")
 		print(ascii_banner)
 		print("\033[1;36;48m")
-		fir = open("/root/Documents/vulnorator/about.txt" )
+		fir = open("about.txt" )
 		ar = fir.readlines()
 		for i in ar:
 			print(i)
