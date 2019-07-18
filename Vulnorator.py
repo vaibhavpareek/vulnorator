@@ -47,8 +47,7 @@ while(True):
 		print("\033[1;35;48m\nIMPORTANT :: \n[+] Just Provide the URL or IP address of the target.it will open related tabs in your browser for information gathering.\n[+] Start reading content from websites opened in the browser to get best information regarding target.\n[+]It will store the whois and traceroute information in the files whois.txt and traceroute.txt respectively.\n[+] For backup all the important links are stored in a file which is saved in OUTPUT/[WEBSITE]/footprinting.txt.")
 		que = input("\n\t\t\t\tURL or KEYWORD : ")
 		query = "inurl:"+que
-		system("mkdir OUTPUT/"+str(que))
-		system("mkdir OUTPUT/"+str(que)+"/Info_gathering")
+		system("mkdir -p OUTPUT/"+str(que)+"/Info_gathering")
 		file = open('OUTPUT/'+str(que)+'/Info_gathering/footprinting.txt','a')
 		print("\033[1;35;48m\n[PASSIVE INFORMATION GATHERING]..........\n")
 		for j in search(query, tld="co.in", num=10, stop=10, pause=2):
@@ -93,8 +92,7 @@ while(True):
 		print(ascii_banner)
 		print("\n\033[1;35;48mIMPORTANT :: \n[+] Just provide the URL or IP address of the target.\n[+] It will scan the domain thoroghly for open ports ,running services ,firewalls , outdated versions and much more.\n[+] After scanning is completed output will be saved in the DESKTOP/OUTPUT/[WEBSITE]/scan.txt")
 		name = input("\n\n\t\t\tIP OR Name of the Target you want to scan : ")
-		system("mkdir OUTPUT/"+str(name))
-		system("mkdir OUTPUT/"+str(name)+"/Scanning")
+		system("mkdir -p OUTPUT/"+str(name)+"/Scanning")
 		system("nmap -v -p 1-1000 -sV -O -sS -T4 -oN OUTPUT/"+str(name)+"/Scanning/scan.txt"+" "+str(name))
 		down = input(">>Do you want to downnload Nmap Cheatsheet [y/n] ?")
 		if(down=='y' or down=='Y' or down=='yes' or down=='Yes' or down=='YES'):
@@ -111,8 +109,7 @@ while(True):
 			system("clear")
 			enumeration()
 			name = input(">>[+ Target] : ")
-			system("mkdir OUTPUT/"+str(name))
-			system("mkdir OUTPUT/"+str(name)+"/Enumeration")
+			system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")
 			inpp = int(input(">>Hacking : "))
 			if(inpp==1):
 				st = input(">>Enter the cve or service name to find exploit for that : ")
