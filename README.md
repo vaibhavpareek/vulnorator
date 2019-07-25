@@ -11,13 +11,14 @@ Hardware Requirements for Vulnorator to run efficiently:
 
 Software Requirements for Vulnorator to run efficiently:
 1. Python3 should be installed in your system. If not, then install via `sudo apt-get install python3.7` (or latest version)
-2. Install the required packages for Python3.
+2. For the Proof of Concept feature : install `sudo apt-get install scrot`
+3. Install the required packages for Python3.
     1. Terminal banner - `pip3 install terminal-banner`
     2. Pyfiglet - `pip3 install pyfiglet`
     3. os (if not by default) - `pip3 install os`
     4. googlesearch (if not by default) - `pip3 install google`
     5. time (if not by default) - `pip3 install time`
-3. Now you have all the dependencies installed in your system to run this tool smoothly.
+4. Now you have all the dependencies installed in your system to run this tool smoothly.
 
 How to run Vulnorator: 
 1. Just Clone this repositry : `git clone https://github.com/vaibhavpareek/vulnorator.git`
