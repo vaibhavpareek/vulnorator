@@ -108,10 +108,10 @@ while(True):
 		while(q=="q" or q=="quit" or q=="Q"):
 			system("clear")
 			enumeration()
-			name = input(">>[+ Target] : ")
-			system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")
 			inpp = int(input(">>Hacking : "))
 			if(inpp==1):
+				name = input(">>[+ Target] : ")
+				system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")
 				st = input(">>Enter the cve or service name to find exploit for that : ")
 				s = input(">>Do you want the save results ?(y/n) : ")
 				if(s=='y' or s=='YES' or s=='Yes' or s=='yes'):
@@ -122,6 +122,8 @@ while(True):
 			elif(inpp==2):
 				system("clear")
 				print("\033[1;33;48m")
+				name = input(">>[+ Target] : ")
+				system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")				
 				ascii = pyfiglet.figlet_format("!Vulnorator!  - Metasploit")
 				print(ascii)
 				system("service postgresql start")
@@ -135,15 +137,19 @@ while(True):
 				i = input(">>Do you want to record your further work with metasploit as POC ?[y/n] : ")
 				if(i=='y' or i=='YES' or i=='Yes' or i=='yes'):
 					print("......Enter `exit` to stop recording work")
-					system("script --timing OUTPUT/"+str(name)+"/Enumeration/metasploit.log")					
-				system("msfconsole -q")
+					system("msfconsole -q")
+					system("scrot -z -u -d 1 OUTPUT/"+str(name)+"/Enumeration/poc.png")
+				else:
+					system("msfconsole -q")															
 				q = input(">>To Go Back Press q or Q ? : ")
 			elif(inpp==3):
 				system("clear")
 				print(ascii_banner)
+				name = input(">>[+ Target] : ")
+				system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")				
 				st = input(">>Enter the target domain or link  where you want to launch sqlmap : ")
 				sqlmap()
-				c = input(">>Hacking : ")
+				c = int(input(">>Hacking : "))
 				if(c==1):
 					system("sqlmap -u "+str(st)+" --dbs")
 				elif(c==2):
@@ -163,6 +169,8 @@ while(True):
 			elif(inpp==4):
 				system("clear")
 				print(ascii_banner)
+				name = input(">>[+ Target] : ")
+				system("mkdir -p OUTPUT/"+str(name)+"/Enumeration")				
 				print("How To Get Started in CyberSecurity? ")
 				fo = open("learn_cyber.txt",'r')
 				ar = fo.readlines()
