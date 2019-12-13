@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Dec 13 23:23:43 2019 as: nmap -v -p 1-1000 -sV -O -sS -T4 -oX OUTPUT/6/Info_gathering/nmapreport.xml 6 -->
+<nmaprun scanner="nmap" args="nmap -v -p 1-1000 -sV -O -sS -T4 -oX OUTPUT/6/Info_gathering/nmapreport.xml 6" start="1576259623" startstr="Fri Dec 13 23:23:43 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1000" services="1-1000"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<target specification="0.0.0.6" status="skipped" reason="invalid"/>
+<runstats><finished time="1576259624" timestr="Fri Dec 13 23:23:44 2019" elapsed="0.71" summary="Nmap done at Fri Dec 13 23:23:44 2019; 0 IP addresses (0 hosts up) scanned in 0.71 seconds" exit="success"/><hosts up="0" down="0" total="0"/>
+</runstats>
+</nmaprun>
