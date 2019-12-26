@@ -8,6 +8,15 @@ def clr():
 	system("clear")
 def cont():
 	i = input("[+] Press Any Key to Continue ")
+def metasploit():
+	print("....Enter `quit` to exit the metasploit")
+	print("[+]To Use Exploit         : use <exploit name>")
+	print("[+]To See Requirements    : show options")
+	print("[+]To Set the environment : set RHOSTS <target IP>")
+	print("[+]To See Payload         : show payloads")
+	print("[+]To Use the payload     : set PAYLOAD <payload name>")
+	print("[+]To Exploit             : exploit or run")
+					
 def info_gather():
 	ascii_banner = pyfiglet.figlet_format("!Information Gathering",font="slant")
 	print(ascii_banner)

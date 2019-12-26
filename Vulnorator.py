@@ -36,8 +36,8 @@ while(True):
 							for x in res.json()['subdomains']:
 								print(x)					
 							print("[+ Saved] Subdomains are saved : OUTPUT/"+str(que)+"/Info_gathering/subdomains.txt")
-						except:
-							print("Some Error has occured")
+						except Exception as e:
+							print("Some Error has occured"+str(e))
 						cont()
 					elif(choi==4):
 						clr()
@@ -49,9 +49,7 @@ while(True):
 						cont()
 					elif(choi==6):
 						try:
-							system("nmap -v -p 1-1000 -sV -O -sS -T4 " +que+ " -oX OUTPUT/"+str(que)+"/Info_gathering/nmapreport.xml")
-							system("xsltproc OUTPUT/"+str(que)+"Info_gathering/nmapreport.xml > OUTPUT/"+str(que)+"/Info_gathering/nmap.html")
-							pdfkit.from_file('OUTPUT/'+str(que)+'/Info_gathering/nmap.html','OUTPUT/'+str(que)+'/Info_gathering/nmap.pdf')
+							pdfkit.from_url('http://api.hackertarget.com/nmap/?q='+str(que),'OUTPUT/'+str(que)+'/Info_gathering/nmap.pdf')
 							print("[+ Saved] NMAP Scan RECORDS ARE SAVED  : OUTPUT/"+str(que)+"/Info_gathering/nmap.pdf")
 							cont()
 						except Exception as e:
@@ -72,23 +70,23 @@ while(True):
 						print("[+ Saved] DNS Stuff Analysis RECORDS ARE SAVED  : OUTPUT/"+str(que)+"/Info_gathering/dns.pdf")
 						cont()
 					elif(choi==9):
-						file.write("https://www.shodan.io/search?query="+str(que))
+						file.write("https://www.shodan.io/search?query="+str(que.partition('.')[0]))
 						y = input("Should it be open in browser (y/n) : ")
 						try:
 							if(y=='y'or y=='yes' or y=='Yes' or y=='YES'):
-								webbrowser.open("https://www.shodan.io/search?query="+str(que))
-							pdfkit.from_url("https://tools.dnsstuff.com/#dnsReport|type=domain&&value="+str(que),'OUTPUT/'+str(que)+'/Info_gathering/dns.pdf')
+								webbrowser.open("https://www.shodan.io/search?query="+str(que.partition('.')[0]))
+							pdfkit.from_url("https://www.shodan.io/search?query="+str(que.partition('.')[0]),'OUTPUT/'+str(que)+'/Info_gathering/dns.pdf')
 						except:
 							print("Opps! Some Error has occured")
-						print("[+ Saved] Shodan Information about the target : "+str("https://www.shodan.io/search?query="+str(que))+"\n")
+						print("[+ Saved] Shodan Information about the target : "+str("https://www.shodan.io/search?query="+str(que.partition('.')[0])+"\n"))
 						cont()
 					elif(choi==10):
 						y = input("Should it be open in browser (y/n) : ")
 						try:
 							if(y=='y'or y=='yes' or y=='Yes' or y=='YES'):
 								file.write("http://web.archive.org/")
-								webbrowser.open("http://web.archive.org/")
-								print("[+ Opening] Screenshots of websites : "+str("http://web.archive.org/")+"\n")
+								webbrowser.open("http://web.archive.org/*/"+str(que))
+								print("[+ Opening] Screenshots of websites : "+str("http://web.archive.org/*/"+str(que))+"\n")
 								file.write("https://www.shodan.io/search?query="+str(que))
 								webbrowser.open("https://www.shodan.io/search?query="+str(que))
 								print("[+ Opening] Shodan Information about the target : "+str("https://www.shodan.io/search?query="+str(que))+"\n")
@@ -127,8 +125,10 @@ while(True):
 			print("\n\033[1;35;48mIMPORTANT :: \n[+] Just provide the URL or IP address of the target.\n[+] It will scan the domain thoroghly for open ports ,running services ,firewalls , outdated versions and much more.\n[+] After scanning is completed output will be saved in the DESKTOP/OUTPUT/[WEBSITE]/scan.txt")
 			name = input("\n\n\t\t\tIP OR Name of the Target you want to scan : ")
 			system("mkdir -p OUTPUT/"+str(name)+"/Scanning")
-			system("nmap -v -p 1-1000 -sV -O -sS -T4 -oN OUTPUT/"+str(name)+"/Scanning/scan.txt"+" "+str(name))
-			down = input(">>Do you want to downnload Nmap Cheatsheet [y/n] ?")
+			system("nmap -v -p 1-1000 -sV -O -sS -T4 "+str(name)+"-oX OUTPUT/"+str(name)+"/Scanning/scan.xml")	
+			system("xsltproc OUTPUT/"+str(name)+"/Info_gathering/scan.xml > OUTPUT/"+str(name)+"/Info_gathering/nmap.html")
+			pdfkit.from_file('OUTPUT/'+str(name)+'/Info_gathering/nmap.html','OUTPUT/'+str(nmap)+'/Info_gathering/nmap.pdf')				
+			down = input(">>Do you want to download Nmap Cheatsheet [y/n] ?")
 			if(down=='y' or down=='Y' or down=='yes' or down=='Yes' or down=='YES'):
 				system("wget https://blogs.sans.org/pen-testing/files/2013/10/NmapCheatSheetv1.1.pdf")
 				system("mv NmapCheatSheetv1.1.pdf OUTPUT/"+str(name)+"/Scanning/")
@@ -161,13 +161,7 @@ while(True):
 					ascii = pyfiglet.figlet_format("!Vulnorator!  - Metasploit")
 					print(ascii)
 					system("service postgresql start")
-					print("....Enter `quit` to exit the metasploit")
-					print("[+]To Use Exploit         : use <exploit name>")
-					print("[+]To See Requirements    : show options")
-					print("[+]To Set the environment : set RHOSTS <target IP>")
-					print("[+]To See Payload         : show payloads")
-					print("[+]To Use the payload     : set PAYLOAD <payload name>")
-					print("[+]To Exploit             : exploit or run")
+					metasploit()
 					i = input(">>Do you want to record your further work with metasploit as POC ?[y/n] : ")
 					if(i=='y' or i=='YES' or i=='Yes' or i=='yes'):
 						print("......Enter `exit` to stop recording work")
