@@ -22,6 +22,7 @@ while(True):
 						for j in search(query, tld="co.in", num=10, stop=10, pause=2):
 							print("[+ Opening]  "+str(j)+"\n")
 							file.write(str(j))
+							file.write("\n")
 							webbrowser.open(j)
 						cont()
 					elif(choi==2):
@@ -37,7 +38,7 @@ while(True):
 								print(x)					
 							print("[+ Saved] Subdomains are saved : OUTPUT/"+str(que)+"/Info_gathering/subdomains.txt")
 						except Exception as e:
-							print("Some Error has occured"+str(e))
+							print("NO Subdomains "+str(e))
 						cont()
 					elif(choi==4):
 						clr()
@@ -55,7 +56,7 @@ while(True):
 						except Exception as e:
 							print(e)
 					elif(choi==7):
-						system("traceroute "+str(que)+" > OUTPUT/"+str(que)+"Info_gathering/traceroute.txt")
+						system("traceroute "+str(que)+" > OUTPUT/"+str(que)+"/Info_gathering/traceroute.txt")
 						print("[+ Saved] Traceroute Scan RECORDS ARE SAVED  : OUTPUT/"+str(que)+"/Info_gathering/traceroute.txt")				
 						cont()
 					elif(choi==8):
@@ -257,5 +258,13 @@ while(True):
 			fun = pyfiglet.figlet_format("Thanks for using Vulnorator !")
 			print(fun)
 			exit()
+	except KeyboardInterrupt:
+		fun = pyfiglet.figlet_format("Thanks for using Vulnorator !")
+		print(fun)
+		exit()
 	except ValueError:
 		print("Please Enter the integer")
+	except Exception:
+		fun = pyfiglet.figlet_format("Thanks for using Vulnorator !")
+		print(fun)
+		exit()
