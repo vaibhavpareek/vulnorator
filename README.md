@@ -15,14 +15,14 @@ Vulnorator also assists during the initial phases of penetration testing such as
 ## PreRequisite : Software :
 ```
 1. Python3 : Installed or Configured
-2. Proof of Concept feature : Install `sudo apt-get install scrot`
-3. Install Dependencies : `pip3 -r requirement.txt`
+2. Proof of Concept feature : Install - sudo apt-get install scrot
+3. Install Dependencies : pip3 install -r requirement.txt
 ```
 
 ## How to run Vulnorator: 
 ``` 
-Just Clone this repositry : `git clone https://github.com/vaibhavpareek/vulnorator.git`
-`python3 Vulnorator.py`
+Just Clone this repositry : git clone https://github.com/vaibhavpareek/vulnorator.git
+python3 Vulnorator.py
 ```
 ## [Demonstration](https://www.linkedin.com/posts/vaibhavvp_linux-python-hacking-activity-6553131108039516160-nThg)
 ###### And enjoy the experience of a fresh new tool built in Python for people interested in cyber security.
