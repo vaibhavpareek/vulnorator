@@ -2,7 +2,7 @@
 [![version](https://img.shields.io/badge/version-1.0.1-blue.svg)](https://github.com/vaibhavpareek/vulnorator/)
 <img src="https://img.shields.io/badge/made%20with-python-green.svg" alt="made with python">
 
-*Vulnorator is a Linux based tool written in Python. It had been developed in order to aid in about learning penetration testing and different types of vulnerabilities.\
+*Vulnorator is a Linux based TUI tool written in Python. It had been developed in order to aid in about learning penetration testing and different types of vulnerabilities.\
 Vulnorator also assists during the initial phases of penetration testing such as: information gathering, scanning and automatic enumeration thanks to its awesome user driven module. Additionally it also helps you learn about the vulnerabilites, each divided into very specific categories.*
 
 ## PreRequisite : Hardware :
@@ -20,13 +20,11 @@ Vulnorator also assists during the initial phases of penetration testing such as
 ```
 
 ## How to run Vulnorator: 
+``` 
+Just Clone this repositry : `git clone https://github.com/vaibhavpareek/vulnorator.git`
+`python3 Vulnorator.py`
 ```
-1. Just Clone this repositry : `git clone https://github.com/vaibhavpareek/vulnorator.git`
-2. Now copy this folder to your `/root/Documents/` folder so the default file locations do not get hampered. If you want to copy it to some another location then just replace that path with `"/root/Documents/"` in Vulnorator.py
-3. Now everything is fine and good to go.
-4. Just run the Vulnorator file with 
-   `python3 Vulnorator.py`
-```
+## [Demonstration](https://www.linkedin.com/posts/vaibhavvp_linux-python-hacking-activity-6553131108039516160-nThg)
 ###### And enjoy the experience of a fresh new tool built in Python for people interested in cyber security.
 
 
